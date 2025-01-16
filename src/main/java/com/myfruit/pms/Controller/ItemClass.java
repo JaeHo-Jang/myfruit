@@ -1,10 +1,8 @@
 package com.myfruit.pms.Controller;
 
+import com.myfruit.pms.dto.ItemDTO;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/items")
@@ -16,7 +14,7 @@ public class ItemClass {
     }
 
     @PostMapping
-    public void createItem(@RequestBody Item item) {
-
+    public void createItem(@RequestBody ItemDTO itemDTO) {
+        System.out.println(itemDTO.getItem());
     }
 }
