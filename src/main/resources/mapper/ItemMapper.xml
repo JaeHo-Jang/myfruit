@@ -5,4 +5,8 @@
     <insert id="insertItem" parameterType="com.myfruit.pms.dto.ItemDTO">
         insert into items (name) values (#{item});
     </insert>
+
+    <select id="getItemById" resultType="com.myfruit.pms.dto.ItemDTO">
+        select id, name As item from items where id = #{id};
+    </select>
 </mapper>
