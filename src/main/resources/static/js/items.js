@@ -22,7 +22,7 @@ document.getElementById('itemForm').addEventListener ('submit', function (event)
         }
     })
     .catch(error => {
-        console.error('Error',error);
+        console.error('Error:',error);
         alter('오류가 발생했습니다.');
     });
 })
