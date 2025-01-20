@@ -11,4 +11,9 @@ public class HelloController {
         return "common/hello";
     }
 
+    @GetMapping("/")
+    public String home () {
+        return "/common/home";
+    }
+
 }
